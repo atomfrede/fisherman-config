@@ -11,7 +11,7 @@ alias gapa='git add --patch'
 
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+#alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
@@ -33,7 +33,6 @@ alias gcb='git checkout -b'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
 alias gclean='git clean -fd'
-alias gpristine='git reset --hard && git clean -dfx'
 alias gcm='git checkout master'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
@@ -56,20 +55,12 @@ alias gga='git gui citool --amend'
 
 alias ggpur='ggu'
 
-alias ggpull='git pull origin $(git_current_branch)'
-
-alias ggpush='git push origin $(git_current_branch)'
-
-alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
-
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
-
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
-alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
+#alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 
 alias gk='\gitk --all --branches'
-alias gke='\gitk --all $(git log -g --pretty=format:%h)'
+alias gke='\gitk --all (git log -g --pretty=format:%h)'
 
 alias gl='git pull'
 alias glg='git log --stat'
@@ -78,8 +69,8 @@ alias glgg='git log --graph'
 alias glgga='git log --graph --decorate --all'
 alias glgm='git log --graph --max-count=10'
 alias glo='git log --oneline --decorate'
-alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+#alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias glog='git log --oneline --decorate --graph'
 alias gloga='git log --oneline --decorate --graph --all'
 alias glp="_git_log_prettily"
@@ -92,7 +83,6 @@ alias gmum='git merge upstream/master'
 
 alias gp='git push'
 alias gpd='git push --dry-run'
-alias gpoat='git push origin --all && git push origin --tags'
 alias gpu='git push upstream'
 alias gpv='git push -v'
 
@@ -109,7 +99,6 @@ alias grhh='git reset HEAD --hard'
 alias grmv='git remote rename'
 alias grrm='git remote remove'
 alias grset='git remote set-url'
-alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias gru='git reset --'
 alias grup='git remote update'
 alias grv='git remote -v'
@@ -133,10 +122,7 @@ alias gts='git tag -s'
 alias gtv='git tag | sort -V'
 
 alias gunignore='git update-index --no-assume-unchanged'
-alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+#alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 alias gup='git pull --rebase'
 alias gupv='git pull --rebase -v'
 alias glum='git pull upstream master'
-
-alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
