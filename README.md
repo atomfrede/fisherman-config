@@ -4,6 +4,7 @@
 
 * ``git.aliases.fish`` mostly all aliases provided by the oh-my-zsh git plugin
 * ``gradle.aliases.fish`` some alias for gradle wrapper usage
+* ``arch.aliases.fish`` some useful aliases for often used commands for my arch setup
 
 ## Installation
 
