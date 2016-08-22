@@ -3,6 +3,7 @@
 ## Aliases
 
 * ``git.aliases.fish`` mostly all aliases provided by the oh-my-zsh git plugin
+* ``gradle.aliases.fish`` some alias for gradle wrapper usage
 
 ## Installation
 
