@@ -1,1 +1,1 @@
-alias gradlew='./gradlew'
+alias gradlew='./gradlew --console rich'
