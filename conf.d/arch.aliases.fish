@@ -1,1 +1,1 @@
-alias arch-up='yaourt -Syua'
+alias arch-up='pacaur -Syu'
