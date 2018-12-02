@@ -1,1 +1,1 @@
-alias arch-up='pacaur -Syu'
+alias arch-up='pikaur -Syu'
